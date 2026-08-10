@@ -1,0 +1,73 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  border-radius: 8px;
+
+  background-color: var(--background-color);
+}
+.tag {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+
+  margin: 0 16px 8px 0;
+  padding: 0 10px 0 12px;
+
+  background: var(--shadow-color);
+  color: var(--secondary-color);
+
+  opacity: 90%;
+
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  box-shadow: 0 1px 2px var(--shadow-color);
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+
+  width: 0;
+  height: 0;
+
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+  border-color: transparent var(--shadow-color) transparent transparent;
+}
+
+.tag::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 1px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background: var(--background-color);
+
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.tag:hover,
+.tag--active {
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.tag:hover::before,
+.tag--active::before {
+  border-right-color: var(--background-color);
+}

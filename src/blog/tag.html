@@ -5,7 +5,7 @@ pagination:
   alias: tag
   addAllPagesToCollections: true
 
-layout: layouts/base.html
+layout: layouts/blog.html
 permalink: /blog/tag/{{ tag | slugify }}/
 eleventyComputed:
   title: "Posts tagged with {{ tag }}"
