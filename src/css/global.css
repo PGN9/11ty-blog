@@ -1,0 +1,244 @@
+@import url("reset.css");
+
+:root {
+  --background-color: #fefefe;
+  --text-color: #252525;
+  --primary-color: #545454;
+  --secondary-color: #7d7d7d;
+  --shadow-color: #cfcfcf;
+}
+/* pattern reference: https://www.magicpattern.design/tools/css-backgrounds */
+/* lace reference: https://codepen.io/aegnis/pen/bBpWGR */
+
+body {
+  min-height: 100vh;
+  font-family: "Courier New", monospace;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  background-image:
+    radial-gradient(var(--primary-color) 1.5px, transparent 1.5px),
+    radial-gradient(var(--primary-color) 1.5px, var(--background-color) 1.5px);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    10px 10px;
+}
+
+/* Header & Main Containers */
+
+header,
+main,
+.note-paper,
+footer {
+  width: 95%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note-paper {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+
+  top: 100px;
+
+  height: 700px;
+  opacity: 0.8;
+
+  background: var(--background-color);
+  border-radius: 8px;
+  border: 1px solid var(--shadow-color);
+}
+
+header {
+  opacity: 0.9;
+
+  margin-top: 3rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.nav__link {
+  display: block;
+
+  padding: 0.8rem 1.4rem;
+
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  white-space: nowrap;
+
+  background-color: var(--shadow-color);
+
+  border: 1px solid var(--shadow-color);
+  border-bottom: none;
+
+  border-radius: 8px 8px 0 0;
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.nav__link--active {
+  position: relative;
+  z-index: 2;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  transform: translateY(-3px);
+}
+
+.nav__link:not(.nav__link--active):hover {
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  transform: translateY(-3px);
+}
+
+/* Main Content Section */
+main {
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+
+  min-height: 700px;
+
+  padding: 3rem 4rem;
+
+  background-color: var(--background-color);
+
+  border: 1px solid var(--shadow-color);
+
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.content {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 22px,
+    var(--shadow-color) 24px
+  );
+}
+
+footer {
+  margin-top: 2rem;
+  border-radius: 8px;
+  position: relative;
+  background-color: var(--background-color);
+
+  border: 1px solid var(--shadow-color);
+
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+footer p {
+  margin: 1.5rem 4rem;
+}
+
+.lace {
+  height: 70px;
+  background: transparent;
+
+  background-image:
+    radial-gradient(
+      circle at 15px 0,
+      transparent 14px,
+      var(--text-color) 15px,
+      transparent 16px
+    ),
+    radial-gradient(
+      circle at 15px 0,
+      transparent 14px,
+      var(--text-color) 15px,
+      transparent 16px
+    ),
+    radial-gradient(
+      circle at 15px 0,
+      transparent 4px,
+      var(--text-color) 5px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 5px 5px,
+      transparent 1px,
+      var(--text-color) 2px,
+      transparent 3px
+    );
+
+  background-repeat: repeat-x;
+
+  background-position:
+    0 0,
+    15px 6px,
+    0 0,
+    25px 9px;
+
+  background-size:
+    30px 21px,
+    30px 21px,
+    30px 21px,
+    30px 20px;
+}
+
+.lace--flip {
+  transform: scaleY(-1);
+}
+
+/* Mobile Responsive Enhancements */
+@media (max-width: 768px) {
+  header,
+  main {
+    width: 95%;
+  }
+
+  header {
+    margin-top: 1.5rem;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav__link {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 1.5rem 1.25rem;
+    min-height: 500px;
+  }
+}
+
+/* fade in animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main,
+footer {
+  animation: fade-in-up 500ms ease-out both;
+}

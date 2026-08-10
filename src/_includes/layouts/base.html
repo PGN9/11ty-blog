@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include "basehead.html" %} {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a
+          class="nav__link {% if page.url == '/' %}nav__link--active{% endif %}"
+          href="/"
+        >
+          Home
+        </a>
+
+        <a
+          class="nav__link {% if page.url.startsWith('/blog/') %}nav__link--active{% endif %}"
+          href="/blog/"
+        >
+          Blog
+        </a>
+
+        <a
+          class="nav__link {% if page.url.startsWith('/project/') %}nav__link--active{% endif %}"
+          href="/project/"
+        >
+          Project
+        </a>
+
+        <a
+          class="nav__link {% if page.url.startsWith('/contact/') %}nav__link--active{% endif %}"
+          href="/contact/"
+        >
+          Contact
+        </a>
+      </nav>
+    </header>
+
+    <div class="note-paper"></div>
+    <main>
+      <div class="content">
+        {% block content %} {{ content | safe }} {% endblock %}
+      </div>
+    </main>
+
+    <footer>
+      <div class="lace"></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget
+        blandit leo. Nullam efficitur vestibulum vestibulum. Proin malesuada
+        eleifend dolor sed lacinia. Pellentesque dolor odio, tempus sed nisl et,
+        tristique viverra justo. Nullam odio massa, consequat ac libero vel,
+        fringilla gravida diam. Donec fermentum magna in augue interdum, a
+        facilisis eros cursus. Sed cursus dolor et mi rutrum, sit amet convallis
+        justo scelerisque. Phasellus euismod arcu ligula, id euismod metus
+        eleifend sed.
+      </p>
+      <div class="lace lace--flip"></div>
+    </footer>
+  </body>
+</html>
