@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx eleventy",
     "start": "npx eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/11ty-blog/"
   },
   "keywords": [],
   "author": "",
