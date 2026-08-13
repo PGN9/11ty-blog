@@ -6,6 +6,9 @@
   --primary-color: #545454;
   --secondary-color: #7d7d7d;
   --shadow-color: #cfcfcf;
+  --hyperlink-color: #eb5287;
+  --hyperlink-color-visited: #cf3c61;
+  --highlight-color: #ffd7dd;
 }
 /* pattern reference: https://www.magicpattern.design/tools/css-backgrounds */
 /* lace reference: https://codepen.io/aegnis/pen/bBpWGR */
@@ -127,12 +130,14 @@ main {
 }
 
 .content {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 22px,
-    var(--shadow-color) 24px
+  background-color: var(--background-color);
+  opacity: 0.8;
+  background-image: radial-gradient(
+    circle,
+    var(--shadow-color) 1.2px,
+    transparent 1.2px
   );
+  background-size: 15px 15px;
 }
 
 footer {
@@ -229,7 +234,7 @@ footer p {
 @keyframes fade-in-up {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(10px);
   }
 
   to {
@@ -238,7 +243,34 @@ footer p {
   }
 }
 
-main,
-footer {
+main {
   animation: fade-in-up 500ms ease-out both;
+}
+
+/* 公用 general */
+.mycard {
+  max-width: 100%;
+  padding: 0.75rem 1rem;
+
+  border: 4px dotted var(--shadow-color);
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
+
+  transition: box-shadow 0.2s ease;
+}
+
+.mycard:hover {
+  box-shadow: 0 0 5px var(--highlight-color);
+}
+
+.content a {
+  font-weight: bold;
+  color: var(--hyperlink-color);
+}
+
+.content a:visited {
+  color: var(--hyperlink-color-visited);
+}
+.highlight {
+  background: linear-gradient(transparent 55%, var(--highlight-color) 55%);
 }

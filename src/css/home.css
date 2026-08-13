@@ -1,12 +1,49 @@
-@import url("./components/card.css");
-h1 {
-  color: #2600ff;
+@import url("./components/postbar.css");
+
+.home-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-.home-card__container {
-  margin: 1rem auto;
-  max-width: 960px;
-  display: grid;
-  flex-direction: column;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.aboutwebsite {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.aboutme {
+  grid-row: span 4;
+}
+
+.recentposts {
+  grid-column: span 2;
+}
+
+.timeline {
+  border: 2px solid red;
+  grid-column: span 3;
+}
+
+/* elements */
+
+model-viewer {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 2rem auto;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .home-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutwebsite,
+  .aboutme,
+  .recentposts,
+  .timeline {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }

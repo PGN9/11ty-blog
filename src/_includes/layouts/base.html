@@ -28,33 +28,22 @@
         </a>
 
         <a
-          class="nav__link {% if page.url.startsWith('/contact/') %}nav__link--active{% endif %}"
-          href="/contact/"
+          class="nav__link {% if page.url.startsWith('/gallery/') %}nav__link--active{% endif %}"
+          href="/gallery/"
         >
-          Contact
+          Gallery
         </a>
       </nav>
     </header>
 
     <div class="note-paper"></div>
     <main>
-      <div class="content">
-        {% block content %} {{ content | safe }} {% endblock %}
-      </div>
+      <div class="content">{% block content %} {% endblock %}</div>
     </main>
 
     <footer>
       <div class="lace"></div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget
-        blandit leo. Nullam efficitur vestibulum vestibulum. Proin malesuada
-        eleifend dolor sed lacinia. Pellentesque dolor odio, tempus sed nisl et,
-        tristique viverra justo. Nullam odio massa, consequat ac libero vel,
-        fringilla gravida diam. Donec fermentum magna in augue interdum, a
-        facilisis eros cursus. Sed cursus dolor et mi rutrum, sit amet convallis
-        justo scelerisque. Phasellus euismod arcu ligula, id euismod metus
-        eleifend sed.
-      </p>
+      <p>Lorem ipsum</p>
       <div class="lace lace--flip"></div>
     </footer>
   </body>

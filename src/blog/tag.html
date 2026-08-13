@@ -1,9 +1,8 @@
 ---
 pagination:
-  data: collections
+  data: collections.tagList
   size: 1
   alias: tag
-  addAllPagesToCollections: true
 
 layout: layouts/blog.html
 permalink: /blog/tag/{{ tag | slugify }}/
@@ -13,6 +12,4 @@ eleventyComputed:
 
 <p>Posts tagged with {{ tag }}</p>
 
-{% for post in collections[tag] %}
-<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{% endfor %}
+{% for post in collections[tag] %} {% PostBar post %} {% endfor %}
