@@ -9,9 +9,10 @@
   --hyperlink-color: #eb5287;
   --hyperlink-color-visited: #cf3c61;
   --highlight-color: #ffd7dd;
+  --sticky-color: #fbe8ea;
+  --sticky-color-dark: #fcdde2;
+  --sticky-color-light: #f9ebef;
 }
-/* pattern reference: https://www.magicpattern.design/tools/css-backgrounds */
-/* lace reference: https://codepen.io/aegnis/pen/bBpWGR */
 
 body {
   min-height: 100vh;
