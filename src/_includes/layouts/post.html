@@ -5,13 +5,16 @@
   <h1>{{ title }}</h1>
   <p><time>{{ date }}</time></p>
 
-  <ul>
+  <div class="tag-list">
     {% for tag in tags %}
-    <li>
-      <a href="/blog/tag/{{  tag | slugify  }}">{{tag}}</a>
-    </li>
+    <a
+      class="tag{% if tagName == tag %} tag--active{% endif %}"
+      href="/blog/tag/{{ tag | slugify }}"
+    >
+      {{ tag }}
+    </a>
     {% endfor %}
-  </ul>
+  </div>
 
   {% if type == "sticky-note" %}
   <div class="sticky-notes">{{ content | safe }}</div>

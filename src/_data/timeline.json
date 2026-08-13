@@ -1,0 +1,20 @@
+[
+  {
+    "type": "education",
+    "title": "Master of Engineering - University of Calgary",
+    "date": "Sep 2025",
+    "description": "Pursuing Electrical and Computer Engineering — Software Engineering to further develop my software engineering skills."
+  },
+  {
+    "type": "education",
+    "title": "Bachelor of Science - University of Calgary",
+    "date": "Feb 2025",
+    "description": "Graduated with a major in Computer Science. Explored different areas of computer science while developing a foundation in algorithms, databases, and software development."
+  },
+  {
+    "type": "project",
+    "title": "Automated CAD Drawing Generation",
+    "date": "Apr 2025",
+    "description": "Developed a system for generating CAD drawings from aerial imagery, collaborating with clients and team members throughout the project."
+  }
+]

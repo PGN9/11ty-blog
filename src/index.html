@@ -1,21 +1,90 @@
 ---
 layout: layouts/home.html
 title: Home
-description: "This is the home page"
+description: "My personal web space"
 ---
 
-<p>I AM THE HOME PAGE</p>
+<h1><span class="highlight">Hello.</span></h1>
+<br />
 
-<model-viewer
-  src=".\assets\models\model_rigged.glb"
-  alt="My 3D model"
-  camera-orbit="0deg 90deg 10m"
-  auto-rotate
-  rotation-per-second="30deg"
->
-</model-viewer>
+<div class="home-panel">
+  <div class="mycard aboutwebsite">
+    <h3>About this website</h3>
+    <br />
 
-<!-- <div class="index-card__container">
-  {% for card in cards %} {% Card title=card.title, link=card.link,
-  linkText=card.linkText, raised=card.raised %} {% endfor %}
-</div> -->
+    <p>Welcome to my <span class="highlight">internet space</span>!</p>
+    <br />
+
+    <p>
+      This site serves as both a personal archive and a portfolio for my future
+      projects. The <a href="/blog">Blog</a> section includes my study notes and
+      personal journals, mainly kept as a record for myself.
+    </p>
+
+    <br />
+    <p>
+      The <a href="/project">Project</a> section serves as my portfolio, where I
+      showcase the programming projects I have worked on and contributed to.
+    </p>
+
+    <br />
+    <p>
+      The Gallery stores some of my drawings and photographs, kept as personal
+      memories as these have been a major hobby of mine.
+    </p>
+  </div>
+
+  <div class="mycard aboutme">
+    <h3>About me</h3>
+    <model-viewer
+      src="./assets/models/model_rigged.glb"
+      alt="My 3D model"
+      camera-orbit="0deg 75deg 1.5m"
+      auto-rotate
+      rotation-per-second="30deg"
+    >
+    </model-viewer>
+    <p>
+      I’m <span class="highlight">Daky Wang</span>, a software developer
+      currently continuing to learn and expand my skills in full-stack
+      development.
+    </p>
+    <br />
+
+    <p>Likes:</p>
+    <ul>
+      <li>Drawing</li>
+      <li>Cute things</li>
+      <li>Programming</li>
+    </ul>
+    <br />
+    <p>Skills:</p>
+    <ul>
+      <li>HTML/JS/CSS</li>
+      <li>Java, SpringBoot</li>
+      <li>React, Vue</li>
+      <li>etc.</li>
+    </ul>
+  </div>
+
+  <div class="mycard recentposts">
+    <h3>Recent Posts</h3>
+    <div class="post-list">
+      {% for post in collections.recentPosts %} {% PostBar post %} {% endfor %}
+    </div>
+  </div>
+
+  <div class="mycard">
+    <h3>Status</h3>
+    {% for status in statuses %}
+    <br />
+    <p><span class="highlight">{{status.text}}</span></p>
+    <p>Updated @ {{status.updatedAt}}</p>
+
+    {% endfor %}
+  </div>
+
+  <div class="timeline">
+    <p>timeline</p>
+  </div>
+</div>
