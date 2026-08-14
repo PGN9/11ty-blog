@@ -1,8 +1,10 @@
 my personal website just for fun
 references:
-[Eleventy Crash Course Series - Jaydan Urwin](https://www.youtube.com/watch?v=uzM5lETc6Sg)
-[CSS Pattens](https://www.magicpattern.design/tools/css-backgrounds)
-[CSS Lace](https://codepen.io/aegnis/pen/bBpWGR)
+
+- [Eleventy Crash Course Series - Jaydan Urwin](https://www.youtube.com/watch?v=uzM5lETc6Sg)
+- [CSS Pattens](https://www.magicpattern.design/tools/css-backgrounds)
+- [CSS Lace](https://codepen.io/aegnis/pen/bBpWGR)
+- [Eleventy Base Blog](https://github.com/11ty/eleventy-base-blog)
 
 ---
 
@@ -12,8 +14,6 @@ TODO
 
 - Refactor into js short code / nunjucks macros
   - Tag
-  - TagList
-  - PostList
   - Reorganize CSS
 
 - Implement

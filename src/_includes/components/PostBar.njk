@@ -1,0 +1,28 @@
+{% macro PostBar(post) %}
+  <div class="mycard">
+    <li class="post-bar">
+      <div class="post-bar__main">
+
+        <a class="post-bar__title" href="{{ post.url | url }}">
+          {{ post.data.title }}
+        </a>
+
+        <time class="post-bar__date">
+          {{ post.data.date | formatDate }}
+        </time>
+
+        <div class="post-bar__tags">
+          {% for tag in post.data.tags %}
+            <a
+              class="post-bar__tag"
+              href="{{ ('/blog/tag/' + (tag | slugify) + '/') | url }}"
+            >
+              {{ tag }}
+            </a>
+          {% endfor %}
+        </div>
+
+      </div>
+    </li>
+  </div>
+{% endmacro %}

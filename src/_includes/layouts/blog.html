@@ -1,17 +1,9 @@
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/css/blog.css" />
+<link rel="stylesheet" href={{"/css/blog.css" | url}} />
 {% endblock %} {% block content %}
 
-<div class="tag-list">
-  {% for tagName in collections.tagList %}
-  <a
-    class="tag{% if tagName == tag %} tag--active{% endif %}"
-    href="/blog/tag/{{ tagName | slugify }}"
-  >
-    {{ tagName }}
-  </a>
-  {% endfor %}
-</div>
+{% from "components/TagList.njk" import TagList %}
+{{ TagList(collections.tagList, page.url) }}
 
 {% if type == "sticky-note" %}
 

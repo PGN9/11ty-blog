@@ -1,0 +1,14 @@
+{% macro TagList(tags, currentUrl) %}
+  <div class="tag-list">
+    {% for tagName in tags %}
+      {% set tagUrl = '/blog/tag/' + (tagName | slugify) + '/' %}
+
+      <a
+        class="tag{% if currentUrl == tagUrl %} tag--active{% endif %}"
+        href="{{ tagUrl | url }}"
+      >
+        {{ tagName }}
+      </a>
+    {% endfor %}
+  </div>
+{% endmacro %}

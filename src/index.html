@@ -17,19 +17,19 @@ description: "My personal web space"
 
     <p>
       This site serves as both a personal archive and a portfolio for my future
-      projects. The <a href="/blog">Blog</a> section includes my study notes and
+      projects. The <a href={{"/blog" | url}}>Blog</a> section includes my study notes and
       personal journals, mainly kept as a record for myself.
     </p>
 
     <br />
     <p>
-      The <a href="/project">Project</a> section serves as my portfolio, where I
+      The <a href={{"/project" | url}}>Project</a> section serves as my portfolio, where I
       showcase the programming projects I have worked on and contributed to.
     </p>
 
     <br />
     <p>
-      The Gallery stores some of my drawings and photographs, kept as personal
+      The <a href={{"/gallery" | url}}>Gallery</a> stores some of my drawings and photographs, kept as personal
       memories as these have been a major hobby of mine.
     </p>
   </div>
@@ -69,9 +69,8 @@ description: "My personal web space"
 
   <div class="mycard recentposts">
     <h3>Recent Posts</h3>
-    <div class="post-list">
-      {% for post in collections.recentPosts %} {% PostBar post %} {% endfor %}
-    </div>
+    {% from "components/PostList.njk" import PostList %}
+    {{PostList(collections.recentPosts) }}
   </div>
 
   <div class="mycard">

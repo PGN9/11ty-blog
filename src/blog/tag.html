@@ -11,6 +11,7 @@ eleventyComputed:
   description: "Posts tagged with {{ tag }}"
 ---
 
-<p>Posts tagged with {{ tag }}</p>
-
-{% for post in collections[tag] %} {% PostBar post %} {% endfor %}
+<div class="post-list">
+  {% from "components/PostBar.njk" import PostBar %} {% for post in
+  collections[tag] %} {{PostBar(post)}} {% endfor %}
+</div>

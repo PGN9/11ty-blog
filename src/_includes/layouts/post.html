@@ -1,20 +1,13 @@
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/css/post.css" />
+<link rel="stylesheet" href={{"/css/post.css" | url}} />
 {% endblock %} {% block content %}
 <article class="post__content">
   <h1>{{ title }}</h1>
-  <p><time>{{ date }}</time></p>
+  <p><time>{{ date | formatDate }}</time></p>
 
-  <div class="tag-list">
-    {% for tag in tags %}
-    <a
-      class="tag{% if tagName == tag %} tag--active{% endif %}"
-      href="/blog/tag/{{ tag | slugify }}"
-    >
-      {{ tag }}
-    </a>
-    {% endfor %}
-  </div>
+  {% from "components/TagList.njk" import TagList %}
+  {{ TagList(tags, page.url) }}
+
 
   {% if type == "sticky-note" %}
   <div class="sticky-notes">{{ content | safe }}</div>

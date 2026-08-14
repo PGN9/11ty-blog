@@ -15,21 +15,21 @@
 
         <a
           class="nav__link {% if page.url.startsWith('/blog/') %}nav__link--active{% endif %}"
-          href="/blog/"
+          href={{"/blog/" | url}}
         >
           Blog
         </a>
 
         <a
           class="nav__link {% if page.url.startsWith('/project/') %}nav__link--active{% endif %}"
-          href="/project/"
+          href={{"/project/" | url}}
         >
           Project
         </a>
 
         <a
           class="nav__link {% if page.url.startsWith('/gallery/') %}nav__link--active{% endif %}"
-          href="/gallery/"
+          href={{"/gallery/" | url}}
         >
           Gallery
         </a>

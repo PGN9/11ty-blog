@@ -4,6 +4,5 @@ title: Blog Page
 description: "My personal blog page containing study notes and journals."
 ---
 
-<div class="post-list">
-  {% for post in collections.posts %} {% PostBar post %} {% endfor %}
-</div>
+{% from "components/PostList.njk" import PostList %}
+{{PostList(collections.posts) }}

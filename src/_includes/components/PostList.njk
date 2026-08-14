@@ -1,0 +1,9 @@
+{% macro PostList(posts) %}
+  <div class="post-list">
+    {% from "components/PostBar.njk" import PostBar %}
+
+    {% for post in posts %}
+      {{ PostBar(post) }}
+    {% endfor %}
+  </div>
+{% endmacro %}

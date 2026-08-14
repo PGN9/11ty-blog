@@ -1,12 +1,22 @@
+const { HtmlBasePlugin } = require("@11ty/eleventy");
+
 const Card = require("./src/_includes/components/Card");
-const PostBar = require("./src/_includes/components/PostBar");
+// const PostBar = require("./src/_includes/components/PostBar");
 
 const collectionApi = (module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/css/");
 
   eleventyConfig.addShortcode("Card", Card);
-  eleventyConfig.addShortcode("PostBar", PostBar);
+  // eleventyConfig.addShortcode("PostBar", PostBar);
+
+  eleventyConfig.addFilter("formatDate", function (date) {
+    return new Date(date).toLocaleDateString("en-CA", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  });
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi
@@ -36,6 +46,7 @@ const collectionApi = (module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/11ty-blog/",
     dir: {
       input: "src",
       includes: "_includes",
