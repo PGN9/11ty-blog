@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.html
-title: Podcast Vocabularies 07-22
+title: Podcast Vocabularies 20260722
 description: Vocabularies form some podcast I listened
 date: 2026-07-22
 type: sticky-note

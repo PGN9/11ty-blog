@@ -6,6 +6,10 @@
   padding: 20px;
 }
 
+.post__content img {
+  border-radius: 8px;
+}
+
 .sticky-notes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

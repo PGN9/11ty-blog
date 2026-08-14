@@ -6,8 +6,8 @@
   --primary-color: #545454;
   --secondary-color: #7d7d7d;
   --shadow-color: #cfcfcf;
-  --hyperlink-color: #eb5287;
-  --hyperlink-color-visited: #cf3c61;
+  --hyperlink-color: #d4517f;
+  --hyperlink-color-visited: #8c3148;
   --highlight-color: #ffd7dd;
   --sticky-color: #fbe8ea;
   --sticky-color-dark: #fcdde2;
@@ -30,14 +30,20 @@ body {
     10px 10px;
 }
 
+p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
 /* Header & Main Containers */
 
 header,
 main,
 .note-paper,
 footer {
-  width: 95%;
-  max-width: 1300px;
+  width: 90%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,9 +54,8 @@ footer {
   left: 0;
   right: 0;
 
-  top: 100px;
-
-  height: 700px;
+  top: 90px;
+  height: 50px;
   opacity: 0.8;
 
   background: var(--background-color);
@@ -70,6 +75,10 @@ header {
   align-items: flex-end;
   gap: 0.3rem;
   padding: 0 0.5rem;
+}
+
+.nav .nav__link {
+  color: var(--primary-color);
 }
 
 .nav__link {
@@ -119,8 +128,6 @@ main {
   position: relative;
   z-index: 1;
 
-  min-height: 700px;
-
   padding: 3rem 4rem;
 
   background-color: var(--background-color);
@@ -143,6 +150,7 @@ main {
 
 footer {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   border-radius: 8px;
   position: relative;
   background-color: var(--background-color);
@@ -244,34 +252,32 @@ footer p {
   }
 }
 
-main {
-  animation: fade-in-up 500ms ease-out both;
-}
-
 /* 公用 general */
 .mycard {
   max-width: 100%;
   padding: 0.75rem 1rem;
 
-  border: 4px dotted var(--shadow-color);
+  border: 0.18rem dotted var(--shadow-color);
   border-radius: 0.5rem;
   background-color: var(--background-color);
 
   transition: box-shadow 0.2s ease;
+  animation: fade-in-up 500ms ease-out both;
 }
 
 .mycard:hover {
   box-shadow: 0 0 5px var(--highlight-color);
 }
 
-.content a {
+a {
   font-weight: bold;
   color: var(--hyperlink-color);
+  text-decoration: none;
 }
-
-.content a:visited {
+a:visited {
   color: var(--hyperlink-color-visited);
 }
+
 .highlight {
   background: linear-gradient(transparent 55%, var(--highlight-color) 55%);
 }
