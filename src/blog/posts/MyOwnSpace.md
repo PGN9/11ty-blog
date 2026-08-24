@@ -3,6 +3,7 @@ layout: layouts/post.html
 title: My Own Space
 description: Actual first post.
 date: 2026-08-13
+type: default
 tags:
   - Journal
   - Emotion
@@ -10,7 +11,7 @@ tags:
 
 My first personal website is up!
 
-Though I haven't got the change to put all my ideas for my website to life yet. The functionality that suffices my main purpose - having a clean and aesthetic place whre I can store my notes and memories - is completed.GitHub Pages is a really convinent and friendly way for static website deployment.
+Though I haven't got the time to put all my ideas for my website to life yet. The functionality that suffices my main purpose - having a clean and aesthetic place whre I can store my notes and memories - is completed.GitHub Pages is a really convinent and friendly way for static website deployment.
 
 Throughout my life, I've been liking the idea of journaling my thoughts. Even if I was just posting tweets on my protected account which had no followers. When I feel tired, I look back at my life and think that they are quite interesting to read.
 

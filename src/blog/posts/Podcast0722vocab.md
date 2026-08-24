@@ -30,3 +30,16 @@ tags:
 - Imbecile
   - 白痴
   - An imbecile is a very foolish or stupid person, or an outdated and offensive medical term for someone with an intellectual disability.
+
+- Concierge
+	- a professional who helps people with personal tasks, special requests, and local information 
+	- 礼宾员
+
+- Intervene
+	- to step into a situation, argument, or event to help, stop a conflict, or change an outcome
+	- 介入、干预
+
+- Reconciliation / Reconcile
+	- to restore friendly relations, make two different ideas or facts compatible
+	- or compare financial records to make sure they match 
+	- 调和、核对记录

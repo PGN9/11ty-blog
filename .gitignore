@@ -1,6 +1,10 @@
 node_modules/
 _site/
 
+.obsidian
+templates
+journals
+
 .env
 .env.*
 !.env.example
