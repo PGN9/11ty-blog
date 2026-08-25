@@ -46,7 +46,7 @@ const collectionApi = (module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/11ty-blog/",
+    // pathPrefix: "/11ty-blog/",
     dir: {
       input: "src",
       includes: "_includes",
